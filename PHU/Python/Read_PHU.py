@@ -124,7 +124,7 @@ tagValues = [tagDataList[i][1] for i in range(0, len(tagDataList))]
 
 # Write histogram data to file
 curveIndices = [tagValues[i] for i in range(0, len(tagNames))\
-                if tagNames[i][0:-3] == "HistResDscr_CurveIndex"]
+                if tagNames[i][0:22] == "HistResDscr_CurveIndex"]
 for i in curveIndices:
     outputfile.write("\n-----------------------")
     histogramBins = tagValues[tagNames.index("HistResDscr_HistogramBins(%d)" % i)]
